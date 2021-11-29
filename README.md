@@ -4,12 +4,16 @@
 
 ### 使用说明
 
+
 > ①  首先将 `okhttpfind.dex` 拷贝到 `/data/local/tmp/` 目录下。
 >  [okhttpfind.dex源码链接](https://github.com/siyujie/okhttp_find)
 
 执行命令启动`frida -U -l okhttp_poker.js -f com.example.demo --no-pause` 可追加 `-o [output filepath]`保存到文件
 
 > ②  调用函数开始执行
+
+![](./screen.gif)
+
 -  **find() 要等完全启动并执行过网络请求后再进行调用**
 -  **hold() 要等完全启动再进行调用**
 -  **history() & resend() 只有可以重新发送的请求**
@@ -149,12 +153,15 @@ var M_rsp_newBuilder = "بﺙذن";
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Find Complete!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
-#### 详情见动图吧！如有问题，请 issues
-- 因为`okhttp_poker.js`覆盖了`okhttp_cat.js`的所有功能，所以放弃了`okhttp_cat.js`
-
 #### 免责声明
 - 仅做学习交流! 请勿商用!!
 - 若因使用本服务与相关软件官方造成不必要的纠纷，本人概不负责!
 - 本人纯粹技术爱好，若侵相关公司的权益，请告知删除!
+
+
+#### Original project
+* https://github.com/siyujie/OkHttpLogger-Frida
+* https://github.com/siyujie/okhttp_find
+
 #### 特别感谢
 - https://github.com/r0ysue/AndroidSecurityStudy
